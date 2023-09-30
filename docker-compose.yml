@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: golang.Dockerfile
+    volumes:
+      - ./:/app
+    ports:
+      - 8080:8080
+#    networks:
+#      - mysql
+
+#networks:
+#  mysql:
+#    name: mysql-golang
+#    external: true
